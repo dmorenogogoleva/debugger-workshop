@@ -11,8 +11,10 @@ a {
 }
 
 button {
-  font-size: 18px;
-  border-radius: 3px;
+  font-family: "Lucida Grande", Helvetica, Arial, sans-serif;;
+  font-size: 24px;
+  border-radius: 18px;
+  padding: 40px 72px;
   background-color: #ffae3d;
   border: none;
   cursor: pointer;
@@ -39,8 +41,4 @@ button:active {
 img {
   margin-right: 15px;
   margin-bottom: 15px;
-}
-
-img:nth-of-type(5n) {
-  margin-right: 0;
 }
