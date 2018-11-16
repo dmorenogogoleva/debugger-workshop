@@ -22,6 +22,7 @@ let count = 0;
 button.addEventListener('click', function () {
   const photo = document.createElement('img');
   photo.src = 'http://placecorgi.com/100/100';
+  photo.alt = 'corgi';
   catalog.appendChild(photo);
 
   count = increase(count);
