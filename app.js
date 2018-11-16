@@ -4,6 +4,8 @@ require(`dotenv`).config();
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
+var { validatePort } = require('./helpers');
+
 var app = express();
 app.use(logger('dev'));
 app.use(express.json());
@@ -27,5 +29,16 @@ app.use(function (err, req, res, next) {
   res.render('error');
 });
 
-app.listen(process.env.SERVER_PORT,
-  () => console.log(`Сервер запущен: http://localhost:${process.env.SERVER_PORT}`))
+
+const runServer = function (port) {
+  const validatedPort = validatePort(port);
+
+  if (validatedPort) {
+    app.listen(validatedPort,
+      () => console.log(`Сервер запущен: http://localhost:${validatedPort}`))
+  } else {
+    throw new Error('port must be a number')
+  }
+}
+
+runServer(process.env.SERVER_PORT);
