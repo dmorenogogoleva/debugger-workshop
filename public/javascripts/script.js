@@ -4,11 +4,11 @@ const increase = function (num) {
   return num += 1;
 };
 
-export const MYSTIC_CONDITION = function (num) {
+const MYSTIC_CONDITION = function (num) {
   return num > 2
 }
 
-export const mysticFunction = function (num) {
+const mysticFunction = function (num) {
   if (MYSTIC_CONDITION(num)) {
     document.location.reload();
   }
