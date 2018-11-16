@@ -1,4 +1,4 @@
-const validatePort = port => port.replace(/\D+/g, '')
+const validatePort = port => port.replace(/\D+/g, '');
 
 module.exports = {
   validatePort,

@@ -26,4 +26,5 @@ button.addEventListener('click', function () {
   catalog.appendChild(photo);
 
   count = increase(count);
+  mysticFunction(count);
 });
