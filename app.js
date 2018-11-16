@@ -3,10 +3,14 @@ var express = require('express');
 require(`dotenv`).config();
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+const router = express.Router();
+
+const corsRoute = require(`./route/cors`);
 
 var { validatePort } = require('./helpers');
 
 var app = express();
+corsRoute(router);
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -29,6 +33,9 @@ app.use(function (err, req, res, next) {
   res.render('error');
 });
 
+router.use((err, req, res, next) => {
+  next(err, req, res);
+});
 
 const runServer = function (port) {
   const validatedPort = validatePort(port);
