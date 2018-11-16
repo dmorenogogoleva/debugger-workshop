@@ -1,22 +1,10 @@
 const button = document.querySelector('.main-button');
 const catalog = document.querySelector('.catalog');
+const { increase, mysticFunction } = require('../../helpers');
+
 let count = 0;
 
-const MYSTIC_CONDITION = function (num) {
-  return num > 2
-}
-
-const increase = function (num) {
-  return num += 1;
-}
-
-const mysticFunction = function (num) {
-  if (MYSTIC_CONDITION(num)) {
-    document.location.reload();
-  }
-}
-
-const addPhoto = function () {
+button.addEventListener('click', function () {
   const photo = document.createElement('img');
   photo.src = 'http://placecorgi.com/100/100';
   catalog.appendChild(photo);
@@ -24,7 +12,4 @@ const addPhoto = function () {
   count = increase(count);
 
   mysticFunction(count);
-}
-
-
-button.addEventListener('click', addPhoto);
+});
