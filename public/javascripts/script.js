@@ -1,6 +1,21 @@
+// helpers
+
+const increase = function (num) {
+  return num += 1;
+};
+
+export const MYSTIC_CONDITION = function (num) {
+  return num > 2
+}
+
+export const mysticFunction = function (num) {
+  if (MYSTIC_CONDITION(num)) {
+    document.location.reload();
+  }
+}
+
 const button = document.querySelector('.main-button');
 const catalog = document.querySelector('.catalog');
-const { increase, mysticFunction } = require('../../helpers');
 
 let count = 0;
 
