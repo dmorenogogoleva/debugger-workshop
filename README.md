@@ -8,5 +8,5 @@ this repo contains some code for debug
 - `npm start`
 
 
-**[slides](https://slides.com/iwanttobealight/deck/live#/)**
+**[slides](https://slides.com/iwanttobealight/deck/live#/)**<br/>
 **[working app](https://iwanttobealight.ru/corgi/public/)**
