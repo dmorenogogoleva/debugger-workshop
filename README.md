@@ -4,8 +4,8 @@ this repo contains some code for debug
 
 ### start
 - copy `.env.example` to `.env`
-- `npm install`
-- `npm start`
+- `yarn`
+- `yarn start`
 
 
 **[slides](https://slides.com/iwanttobealight/deck/live#/)**<br/>
